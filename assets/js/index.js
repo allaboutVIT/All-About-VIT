@@ -1,2 +1,0 @@
-$(.form).find('input, textarea').on('keyup blur focus',function (e){varthis:$(this),label = $this.prev(label);ifetype:== keyup) { if ($this.val() === '') { label.removeClass('active highlight')}else if (e.type === blur){ifthisval:== ) { label.removeClass('active highlight')}else if (e.type === focus){ifthisval:== ) { label.removeClass(highlight)});
-$('.tab a').on(click,function (e){target:$(this).attr(href)}
