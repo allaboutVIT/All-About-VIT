@@ -6,8 +6,7 @@
   "keywords": [],
   "dependencies": {
     "ejs": "2.3.4",
-    "passport": "^0.3.*",
-    "passport-facebook": "^2.*",
+    
 
     "grunt": "1.0.0",
     
