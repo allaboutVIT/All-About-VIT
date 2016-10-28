@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../../js/jquery.min.js"></script>
+  <link href="../../styles/style.css" rel="stylesheet" type="text/css" media="all" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Academic Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <!---->
+  <script src="../../js/bootstrap.min.js"></script>
+
+  <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <!----->
+  <link href="../../styles/hostels.css" rel="stylesheet" type="text/css" media="all" />
+  <link type = "text/css" rel="stylesheet" href="../../font_awesome/css/font-awesome.css">
+  <link type="text/css" rel="stylesheet" herf="../../font_awesome/css/font-awesome.min.css">
+  <link href="../../styles/materialize.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="../../styles/materialize.min.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div class="header head1">
+  <div class="container">
+    <div class="head-top">
+      <div class="logo">
+        <a href="index.html"><img src="images/bo.png" alt="" title="Academic"></a>
+      </div>
+      <div class="login">
+        <ul class="nav-login">
+          <li><a href="#" data-toggle="modal" data-target="#myModal1">Login</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal2">Signup</a></li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!-- login -->
+
+  <!-- //login -->
+  <!-- signup -->
+
+  <!-- //signup -->
+
+  <div class="nav-top">
+    <div class="container">
+      <div class="nav1">
+        <div class="navbar1">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <% if (req.isAuthenticated()) { %>
+
+            <ul class="nav navbar-nav cl-effect-8">
+              <li ><a class="" href="/user/show/<%= user.id %>">Home </a></li>
+              <li><a href="/user/hostels_1/<%= user.id %>">Hostels</a></li>
+              <li><a href="/user/mess_1/<%= user.id %>">Mess</a></li>
+              <li><a href="/da/index_da/">Digital assignment</a></li>
+              <li><a href="/user/restaurents_1/<%= user.id %>">Restaurents</a></li>
+            </ul>
+            <% } %>
+          </div><!-- /.navbar-collapse -->
+        </div>
+        <!-- start search-->
+        <ul class="social-ic">
+          <li><a href="#"><i></i></a></li>
+          <li><a href="#"><i class="ic"></i></a></li>
+          <li><a href="#"><i class="ic1"></i></a></li>
+          <li><a href="#"><i class="ic2"></i></a></li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--gallery-->
+
+<div class="about">
+  <div class="container">
+    <div class="about-head">
+      <h2>Four Beded A/C Rooms</h2>
+      <p> Images will be updated before room councelling to give you more clearity, how the rooms looks like.</br>This information is according to year 2015</p>
+    </div>
+
+    <div class="about-grids">
+      <div class="col-md-5 about-grid1">
+        <h4 >A Block</h4>
+        <div class="about-img">
+          <img src="/images/blank.png" class="img-responsive" alt="" style="height: 80%; width: 80%">
+        </div>
+      </div>
+      <div class="col-md-7 about-grid">
+        </br>
+        <h5><i class="fa fa-bed" aria-hidden="true"></i>
+          Space : Most Spacious
+          </br>
+          <i class="fa fa-bed" aria-hidden="true"></i>
+          CGPA Requirement : ~9.8
+          </br>
+          <i class="fa fa-bed" aria-hidden="true"></i>
+          Block Requirements : Having seperate area for study inside room itself,
+          2 badminton courts, Proper sunlight and windy,
+          Water quality is not that much good as compared to other blocks,
+          Does not have any nearby mess.
+        </h5>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star-half-o fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <!--<i class="fa fa-star-o fa-2x" aria-hidden="true" style="color: yellow; "></i>-->
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="about-grids">
+      <div class="col-md-5 about-grid1">
+
+        <h4 >K Block</h4>
+        <div class="about-img">
+          <img src="/images/blank.png" class="img-responsive" alt="" style="height: 80%; width: 80%">
+        </div>
+
+      </div>
+      <div class="col-md-7 about-grid">
+        </br></br>
+        <h5><i class="fa fa-bed" aria-hidden="true"></i>
+          Space : Sufficient
+          </br>
+          <i class="fa fa-bed" aria-hidden="true"></i>
+          CGPA Requirement : ~9.9
+          </br>
+          <i class="fa fa-bed" aria-hidden="true"></i>
+          Block Reviews : Rooms are good, Location is perfect for CSE students, Good amount of sunlight and wind, Cleaned toilets, Might get disturbanced by other students
+        </h5>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="about-grids">
+      <div class="col-md-5 about-grid1">
+
+        <h4 >G Block</h4>
+        <div class="about-img">
+          <img src="/images/blank.png" class="img-responsive" alt="" style="height: 80%; width: 80%">
+        </div>
+
+      </div>
+      <div class="col-md-7 about-grid">
+        </br></br>
+        <h5><i class="fa fa-bed" aria-hidden="true"></i>
+          Space : Sufficient
+          </br>
+          <i class="fa fa-bed" aria-hidden="true"></i>
+          </br>
+          CGAP Requirement : ~9.55
+          </br>
+          <i class="fa fa-bed" aria-hidden="true"></i>
+          Block Reviews : Block location is nice, Washrooms are cleaned, Having D annex mess nearby, two badminton courts but rooms are having yellow color paint which does not looks good.
+        </h5>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+
+
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="about-grids">
+      <div class="col-md-5 about-grid1">
+
+        <h4 >D-Annex Block</h4>
+        <div class="about-img">
+          <img src="/images/blank.png" class="img-responsive" alt="" style="height: 80%; width: 80%">
+        </div>
+
+      </div>
+
+      <div class="col-md-7 about-grid">
+        </br></br>
+        <h5><i class="fa fa-bed" aria-hidden="true"></i>
+          Space : Spacious enough
+          </br>
+          <i class="fa fa-bed" aria-hidden="true"></i>
+          CGPA Requirement : ~9.9
+          </br>
+          <i class="fa fa-bed" aria-hidden="true"></i>
+          Block Reviews :
+          Best block, two badminton courts,
+          Perfect Location(near to ENZO, TT and Food Park, Clean washrooms
+          having best special mess(D-annex) nearby.</h5>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star-half-o fa-2x" aria-hidden="true" style="color: yellow; "></i>
+
+
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+
+
+
+
+  </div>
+</div>
+
+
+<!-- Include jQuery & Filterizr -->
+<script src="../../js/jquery.min.js"></script>
+
+<script src="../../js/jquery.filterizr.js"></script>
+<script src="../../js/controls.js"></script>
+<script type="text/javascript">
+  $(function() {
+    //Initialize filterizr with default options
+    $('.filtr-container').filterizr();
+  });
+</script>
+<!-- Kick off Filterizr -->
+<!---->
+<!---->
+<!--footer-->
+<div class="footer">
+  <div class="container">
+    <div class="col-md-6 footer-left">
+      <h3>Information</h3>
+      <p class="para">This is website is made for vit students to help them and get their required information without any difficulty. </p>
+    </div>
+    <div class="col-md-6 footer-right">
+      <h3>Contact Us</h3>
+      <ul class="con-icons">
+        <li><a href="mailto:info@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>knowmyvit@gmail.com</a></li>
+      </ul>
+      <p class="copy-right">© 2016 Academic. All rights reserved </p>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+<!-- //swipe box js -->
+
+</body>
+</html>

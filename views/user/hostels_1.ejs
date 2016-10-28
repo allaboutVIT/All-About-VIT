@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../../js/jquery.min.js"></script>
+  <link href="../../styles/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="../../styles/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="../../styles/materialize.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="../../styles/materialize.min.css" rel="stylesheet" type="text/css" media="all" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Academic Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <!---->
+  <script src="../../js/bootstrap.min.js"></script>
+
+  <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <!----->
+  <link href="../../styles/hostels.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div class="header head">
+  <div class="container">
+    <div class="head-top">
+      <div class="logo">
+      </div>
+      <div class="login">
+
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="nav-top">
+    <div class="container">
+      <div class="nav1">
+        <div class="navbar1">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <% if (req.isAuthenticated()) { %>
+
+            <ul class="nav navbar-nav cl-effect-8">
+              <li ><a class="" href="/user/show/<%= user.id %>">Home </a></li>
+              <li><a href="/user/hostels_1/<%= user.id %>">Hostels</a></li>
+              <li><a href="/user/mess_1/<%= user.id %>">Mess</a></li>
+              <li><a href="/da/index_da/<%= session.User.id %>">Assignments</a></li>
+              <li><a href="/user/restaurents_1/<%= user.id %>">Restaurents</a></li>
+              <li><a href="/url/index_url/<%= user.id %>">Doubts</a></li>
+
+            </ul>
+            <% } %>
+          </div><!-- /.navbar-collapse -->
+        </div>
+        <!-- start search-->
+        <ul class="social-ic">
+          <li><a class="btn btn-sm btn-danger btn-danger btn-warning"  href="/session/destroy">Logout</a></li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--gallery-->
+
+<div class="gallery">
+  <div class="container">
+    <div class="gallery-top">
+      <h2>Hostels</h2>
+      <p> Now, no need to in each and every block and request seniors to show their room. You can sit in your room and check all the rooms of VIT and save your three to four days!
+        </br>
+        Drag your mouse to the below images and select your room type.</p>
+    </div>
+
+
+    <!-- Single bed  -->
+
+    <div class=" col-md-4 filtr-item" data-category="1, 5" data-sort="Busy streets">
+      <a href="/user/hostel/<%= user.id %>" class="b-link-stripe b-animate-go  swipebox">
+        <div class="ed-gal-effect slow-zoom horizontal">
+          <div class="img-box"><img src="../../images/K_block.png" alt=" " /></div>
+          <div class="ed-text-box">
+            <div class="ed-gal-text">
+
+              <li><a href="#" data-toggle="modal"  data-target="#myModal1"><h4>Single Bed</h4></a></li>
+
+            </div>
+          </div>
+        </div>
+        <a href="#" data-toggle="modal" style="text-align: center" data-target="#myModal1"><h5>Single Bed</h5></a>
+      </a>
+    </div>
+
+    <div class="modal fade" style="max-height: 25%; " id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <h3>Choose your room type :</h3>
+        <a href="/user/singlebedac/<%= user.id %>"><button  class="btn btn-primary" value="A/C">A/C</button></a>
+        </br>
+        </br>
+        <a href="/user/singlebednonac/<%= user.id %>"><button class="btn btn-primary" value="NON A/C">Non A/C</button></a>
+      </div>
+    </div>
+
+    <!-- Single bed ends -->
+
+
+
+    <div class=" col-md-4 filtr-item" data-category="2, 5" data-sort="Busy streets">
+      <a href="/user/hostel/<%= user.id %>" class="b-link-stripe b-animate-go  swipebox">
+        <div class="ed-gal-effect slow-zoom horizontal">
+          <div class="img-box"><img src="../../images/N_block.png" alt=" "  /></div>
+          <div class="ed-text-box">
+            <div class="ed-gal-text">
+
+              <li><a href="#" data-toggle="modal" data-target="#myModal2"><h4>Two Beded</h4></a></li>
+
+            </div>
+          </div>
+        </div>
+
+        <a href="#" data-toggle="modal" style="text-align: center" data-target="#myModal2"><h5>Two Beded</h5></a>
+      </a>
+    </div>
+
+    <div class="modal fade" style="max-height: 25%; " id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <h3>Choose your room type :</h3>
+        <a href="/user/twobedac/<%= user.id %>"><button  class="btn btn-primary" value="A/C">A/C</button></a>
+        </br>
+        </br>
+        <a href="/user/twobednonac/<%= user.id %>"><button class="btn btn-primary" value="NON A/C">Non A/C</button></a>
+      </div>
+    </div>
+
+    <!-- 2 bed ends -->
+
+
+    <div class=" col-md-4 filtr-item" data-category="1, 4" data-sort="Busy streets">
+      <a href="/user/hostel/<%= user.id %>" class="b-link-stripe b-animate-go  swipebox">
+        <div class="ed-gal-effect slow-zoom horizontal">
+          <div class="img-box"><img src="../../images/H_block.png" alt=" " /></div>
+          <div class="ed-text-box">
+            <div class="ed-gal-text">
+
+              <li><a href="#" data-toggle="modal" data-target="#myModal3"><h4>Three Bed</h4></a></li>
+
+            </div>
+          </div>
+        </div>
+        <a href="#" data-toggle="modal" style="text-align: center" data-target="#myModal3"><h5>Three Beded</h5></a>
+      </a>
+    </div>
+
+    <div class="modal fade" style="max-height: 25%; " id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <h3>Choose your room type :</h3>
+        <a href="/user/threebedac/<%= user.id %>"><button  class="btn btn-primary" value="A/C">A/C</button></a>
+        </br>
+        </br>
+        <a href="/user/threebednonac/<%= user.id %>"><button class="btn btn-primary" value="NON A/C">Non A/C</button></a>
+      </div>
+    </div>
+
+    <!-- Three bed ends -->
+
+
+
+    <div class=" col-md-4 filtr-item" data-category="1, 5" data-sort="Busy streets">
+      <a href="/user/hostel/<%= user.id %>" class="b-link-stripe b-animate-go  swipebox">
+        <div class="ed-gal-effect slow-zoom horizontal">
+          <div class="img-box"><img src="../../images/L_block.png" alt=" " /></div>
+          <div class="ed-text-box">
+            <div class="ed-gal-text">
+
+              <li><a href="#" data-toggle="modal" data-target="#myModal4"><h4>Four Bed</h4></a></li>
+
+            </div>
+          </div>
+        </div>
+        <a href="#" data-toggle="modal" style="text-align: center" data-target="#myModal4"><h5>Four Beded</h5></a>
+      </a>
+    </div>
+
+    <div class="modal fade" style="max-height: 25%; " id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <h3>Choose your room type :</h3>
+        <a href="/user/fourbedac/<%= user.id %>"><button  class="btn btn-primary" value="A/C">A/C</button></a>
+        </br>
+        </br>
+        <a href="/user/fourbednonac/<%= user.id %>"><button class="btn btn-primary" value="NON A/C">Non A/C</button></a>
+      </div>
+    </div>
+
+    <!-- Four bed ends -->
+
+
+    <div class=" col-md-4 filtr-item" data-category="1, 5" data-sort="Busy streets">
+      <a href="/user/hostel/<%= user.id %>" class="b-link-stripe b-animate-go  swipebox">
+        <div class="ed-gal-effect slow-zoom horizontal">
+          <div class="img-box"><img src="../../images/boys_hostel_6.png" alt=" " /></div>
+          <div class="ed-text-box">
+            <div class="ed-gal-text">
+
+              <li><a href="#" data-toggle="modal" data-target="#myModal6"><h4>Six Bed</h4></a></li>
+
+            </div>
+          </div>
+        </div>
+        <a href="#" data-toggle="modal" style="text-align: center" data-target="#myModal6"><h5>Six Beded</h5></a>
+      </a>
+    </div>
+
+    <div class="modal fade" style="max-height: 25%; " id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <h3>Choose your room type :</h3>
+        <a href="/user/sixbedac/<%= user.id %>"><button  class="btn btn-primary" value="A/C">A/C</button></a>
+        </br>
+        </br>
+        <a href="/user/sixbednonac/<%= user.id %>"><button class="btn btn-primary" value="NON A/C">Non A/C</button></a>
+      </div>
+    </div>
+
+    <!-- Six bed ends -->
+
+
+
+    <div class="clearfix"> </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Include jQuery & Filterizr -->
+<script src="../../js/jquery.min.js"></script>
+
+<script src="../../js/jquery.filterizr.js"></script>
+<script src="../../js/controls.js"></script>
+<script type="text/javascript">
+  $(function() {
+    //Initialize filterizr with default options
+    $('.filtr-container').filterizr();
+  });
+</script>
+<!-- Kick off Filterizr -->
+<!---->
+<!---->
+<!--footer-->
+<div class="footer">
+  <div class="container">
+    <div class="col-md-6 footer-left">
+      <h3>Information</h3>
+      <p class="para">This is website is made for vit students to help them and get their required information without any difficulty. </p>
+    </div>
+    <div class="col-md-6 footer-right">
+      <h3>Contact Us</h3>
+      <ul class="con-icons">
+        <li><a href="mailto:info@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>knowmyvit@gmail.com</a></li>
+      </ul>
+      <p class="copy-right">© 2016 Academic. All rights reserved </p>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+<!-- //swipe box js -->
+
+</body>
+</html>

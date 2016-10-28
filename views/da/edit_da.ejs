@@ -1,0 +1,12 @@
+<form action="/da/update_da/<%= da.id %>" method="POST" class="form-signin">
+  <h2>Edit this form</h2>
+
+  <p><input type="text" name="name" value="<%= da.name %>" placeholder="Username"></p>
+  <p><input type="text" name="da" value="<%= da.name %>" placeholder="link"></p>
+  <p><input type="text" name="comments" value="<%= da.name %>" placeholder="Comments"></p>
+
+  <p><input type="submit" value="Update" class="btn btn-lg- btn-primary btn-block"/></p>
+  <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+</form>
+
+
