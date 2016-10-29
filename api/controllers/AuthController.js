@@ -5,7 +5,6 @@ module.exports = {
 
   // login action will render the login view
   login: function (req, res) {
-    console.log('entered into auth-login');
 
     res.view();
   },
