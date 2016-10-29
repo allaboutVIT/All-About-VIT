@@ -106,71 +106,57 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
-
-  <section class="row new-post">
-    <div class="col-md-6 col-md-offset-3">
-      <header><h3>Want to say something?</h3></header>
-      <form action="/url/create" method="post">
-        <div class="form-group">
-          <textarea required class="form-control" name="body" id="new_post" rows="5" placeholder="Your doubts or suggesstions"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Create Post</button>
-        <input type="hidden"  value="" name="_token" />
-      </form>
-    </div>
-
-  </section>
-
-  <section class="row posts">
-    <div class="col-md-6 col-md-offset-3">
-      <header><h5>What other people say....</h5></header>
-      <div class="container1">
-
-        <% _.each(urls, function(url) { %>
-        <tr data-id="<%= url.id %>" data-model="url">
-
-          <div class="row">
-            <!-- box ka size adjust karne ke liye m8 and offset-m2 ko change kar de-->
-              <div class="box-wrapper">
-                <section class="passenger card-panel hoverable">
-                  <div class="row">
-                    <div class="timediv right"><i class="fa fa-calendar-o" aria-hidden="true"></i> <%= url.creationDate %>
-                    </div>
-                    <div class="imgdiv col s3 m2 center-align valign-wrapper">
-                      <img src="http://graph.facebook.com/<%= session.User.uid %>/picture?type=square"  class="valign">
-                    </div>
-                    <div class="detailsdiv col s9 m10">
-                      <h5 class="fontsize14rem"><b><%= session.User.name %></b></h5>
-                      <p><%= url.body %></p>
-                    </div>
-                  </div>
-                </section>
-              </div>
-         </div>
-
-        </tr>
-
-        <% }) %>
+<section class="row new-post">
+  <div class="col-md-6 col-md-offset-3">
+    <header><h3>Want to say something?</h3></header>
+    <form action="/url/create" method="post">
+      <div class="form-group">
+        <textarea required class="form-control" name="body" id="new_post" rows="5" placeholder="Your doubt or answer"></textarea>
       </div>
+      <button type="submit" class="btn btn-primary">Create Post</button>
+      <input type="hidden"  value="" name="_token" />
+    </form>
+    </br></br>
+
+
+  </div>
+
+</section>
+
+<section class="row posts">
+  <div class="col-md-6 col-md-offset-3">
+    <header><h5>What other people ask or say...</h5></header>
+    <div class="container1">
+
+      <% _.each(urls, function(url) { %>
+      <tr data-id="<%= url.id %>" data-model="url">
+
+        <div class="row">
+          <!-- box ka size adjust karne ke liye m8 and offset-m2 ko change kar de-->
+          <div class="box-wrapper">
+            <section class="passenger card-panel hoverable">
+              <div class="row">
+                <div class="timediv right"><i class="fa fa-calendar-o" aria-hidden="true"></i> <%= url.creationDate %>
+                </div>
+                <div class="imgdiv col s3 m2 center-align valign-wrapper">
+                  <img src="http://graph.facebook.com/<%= session.User.uid %>/picture?type=square"  class="valign">
+                </div>
+                <div class="detailsdiv col s9 m10">
+                  <h5 class="fontsize14rem"><b><%= session.User.name %></b></h5>
+                  <p><%= url.body %></p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </tr>
+
+      <% }) %>
     </div>
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </section>
+</section>
 
 </div>
 <div class="footer">

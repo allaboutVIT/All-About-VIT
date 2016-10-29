@@ -34,12 +34,11 @@ module.exports = {
   attributes: {
 
     body : {
-      type : 'text'
+      type : 'text',
+      required : true
     },
 
-    comments: {
-      type: 'string',
-    },
+
 
     creationDate: {
       columnName: 'cre_dt',
