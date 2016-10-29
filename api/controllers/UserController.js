@@ -49,7 +49,7 @@ module.exports = {
         req.session.flash={
           err : err
         };
-        return res.redirect('/user/new');
+          return res.notFound();
       }
       console.log('passed');
       req.session.authenticated = true;

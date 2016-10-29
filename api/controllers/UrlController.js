@@ -13,7 +13,7 @@ module.exports = {
         req.session.flash = {
           err: err
         };
-        return res.redirect('/url/new1');
+        return res.notFound();
       }
 
 
@@ -62,7 +62,7 @@ module.exports = {
 
     Url.update(req.param('id'),req.params.all(), function urlUpdated(err){
       if(err){
-        return res.redirect('/url/upload/'+req.param('id'));
+        return res.notFound();
       }
 
       res.redirect('/url/show_url/'+req.param('id'));

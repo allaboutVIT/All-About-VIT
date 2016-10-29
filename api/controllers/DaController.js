@@ -13,7 +13,7 @@ module.exports = {
         req.session.flash = {
           err: err
         };
-        return res.redirect('/da/new');
+        return res.notFound();
       }
 
 
@@ -60,7 +60,7 @@ module.exports = {
 
     Da.update(req.param('id'),req.params.all(), function daUpdated(err){
       if(err){
-        return res.redirect('/da/upload/'+req.param('id'));
+        return res.notFound();
       }
 
       res.redirect('/da/show_da/'+req.param('id'));
