@@ -19,6 +19,28 @@
 
 module.exports.policies = {
 
+
+  '*': "flash",
+
+  user:{
+    'new' : "flash",
+    create : "flash",
+    show : "userCanSeeProfile",
+    edit : "userCanSeeProfile",
+    update : "userCanSeeProfile",
+    login : "flash",
+    logout : "flash"
+    // '*' : "admin"
+  },
+
+  da : {
+    'index_da' : 'userCanSeeProfile'
+  },
+
+  url : {
+    'index_url' : 'userCanSeeProfile'
+  }
+
   /***************************************************************************
   *                                                                          *
   * Default policy for all controllers and actions (`true` allows public     *
