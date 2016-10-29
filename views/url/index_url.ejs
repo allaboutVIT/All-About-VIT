@@ -112,6 +112,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <form action="/url/create" method="post">
       <div class="form-group">
         <textarea required class="form-control" name="body" id="new_post" rows="5" placeholder="Your doubt or answer"></textarea>
+        <p><input  type="hidden" name="image" value="http://graph.facebook.com/<%= session.User.uid %>/picture?type=square"  placeholder="Course Code"></p>
+
       </div>
       <button type="submit" class="btn btn-primary">Create Post</button>
       <input type="hidden"  value="" name="_token" />
@@ -139,7 +141,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="timediv right"><i class="fa fa-calendar-o" aria-hidden="true"></i> <%= url.creationDate %>
                 </div>
                 <div class="imgdiv col s3 m2 center-align valign-wrapper">
-                  <img src="http://graph.facebook.com/<%= session.User.uid %>/picture?type=square"  class="valign">
+                  <img class="valign" src="<%= url.image %>">
                 </div>
                 <div class="detailsdiv col s9 m10">
                   <h5 class="fontsize14rem"><b><%= session.User.name %></b></h5>
