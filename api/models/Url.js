@@ -42,6 +42,10 @@ module.exports = {
       type : 'string'
     },
 
+    name : {
+      type : 'string'
+    },
+
 
 
     creationDate: {
