@@ -15,9 +15,7 @@ module.exports = {
         };
         return res.redirect('/url/new1');
       }
-      console.log(url.creationDate);
 
-      console.log(url.updateDate);
 
       res.redirect('/url/index_url/' );
 

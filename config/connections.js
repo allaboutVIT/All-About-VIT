@@ -28,9 +28,14 @@ module.exports.connections = {
   * Installed by default.                                                    *
   *                                                                          *
   ***************************************************************************/
-  localDiskDb: {
-    adapter: 'sails-disk'
-  },
+  // localDiskDb: {
+  //   adapter: 'sails-disk'
+  // },
+
+  mongodb: {
+    adapter: 'sails-mongo',
+    url: "mongodb://vinit:vinit@ds137267.mlab.com:37267/allaboutvit"
+  }
 
   /***************************************************************************
   *                                                                          *
