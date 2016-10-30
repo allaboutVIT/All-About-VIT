@@ -89,6 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <table class="bordered striped highlight responsive-table">
           <tr>
             <th>Course Code</th>
+            <th>Submitted By</th>
             <th>Subject</th>
             <th>Faculty</th>
             <th>Link</th>
@@ -103,6 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <tr data-id="<%= da.id %>" data-model="da">
 
             <td><%= da.course_code %></td>
+            <td><%= da.name %></td>
             <td><%= da.subject %></td>
             <td><%= da.faculty %></td>
             <td> <%= da.link %> </td>
@@ -130,6 +132,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </div>
     <form action="/da/create" method="POST" class="form-signin">
       <p><input required type="text" name="course_code" value="" placeholder="Course Code"></p>
+      <p><input required type="hidden" name="name" value="<%= session.User.name %>" placeholder="Your name"></p>
       <p><input required type="text" name="subject" value="" placeholder="Subject"></p>
       <p><input required type="text" name="faculty" value="" placeholder="Faculty"></p>
       <p><input required type="text" name="link" value="" placeholder="Link"></p>

@@ -7,6 +7,10 @@ module.exports = {
       required : true
     },
 
+    name : {
+      type : "string"
+    },
+
     faculty : {
       type : 'string',
       required:true
