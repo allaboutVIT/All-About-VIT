@@ -107,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <td><%= da.name %></td>
             <td><%= da.subject %></td>
             <td><%= da.faculty %></td>
-            <td> <%= da.link %> </td>
+            <td><a href="<%= da.link %>" target="_blank"><%= da.link %></a> </td>
 
             <% if (session.authenticated && session.User.admin) { %>
             <td><a href="/da/show_da/<%= da.id %>" class="btn btn-sm btn-primary">Show</a></td>
