@@ -12,13 +12,7 @@ module.exports = function(req, res, ok) {
   var isAdmin = req.session.User && req.session.User.admin;
   // The requested id does not match the user's id,
   // and this is not an admin
-  if(session.User.uid == "104536946693437") {
-    res.redirect('/');
-  }
-  if(session.User.name == "Muskil Zindagi")
-  {
-    res.redirect('/');
-  }
+ 
   if (!req.isAuthenticated()) {
     var noRightsError = [{name: 'noRights', message: 'You must be an admin.Check userCanSeeProfile.js'}]
     req.session.flash = {
