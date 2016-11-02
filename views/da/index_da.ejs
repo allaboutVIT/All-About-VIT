@@ -126,7 +126,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </br>
     </br>
 
-      <div class="gallery-top">
+    <% if(session.User.name == "Vinit Bodhwani") {  %>
+    <div class="gallery-top">
         <h2>Upload Your Assignments</h2>
         <p>You can also help others by uploading your assignments in google drive and paste your assignemt's link here.<br>There is no exercise better for the heart than reaching down and lifting people up..</p>
       </div>
@@ -141,6 +142,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <p><input type="submit" value="Upload" class="btn btn-lg- btn-primary btn-block"/></p>
       <input type="hidden" name="_csrf" value="<%= _csrf %>" />
     </form>
+    <% } %>
+
 
   </div>
 </div>
