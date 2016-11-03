@@ -34,9 +34,9 @@ module.exports.connections = {
 
   mongodb: {
     adapter: 'sails-mongo',
-    url: "mongodb://b_hacker:vinit123@B@ds137267.mlab.com:37267/allaboutvit"
+    url: "mongodb://vinit:vinit@ds137267.mlab.com:37267/allaboutvit"
   }
-
+  //mongodb://<dbuser>:<dbpassword>@ds137267.mlab.com:37267/allaboutvit
   /***************************************************************************
   *                                                                          *
   * MySQL is the world's most popular relational database.                   *
