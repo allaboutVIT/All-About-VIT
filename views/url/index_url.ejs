@@ -44,7 +44,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Header -->
 <body>
 
-<% if(!session.User.uid == "104536946693437" || !(session.User.name) == "Muskil Zindagi") {  %>
 
 
 <div class="header head">
@@ -109,6 +108,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
+<% if(session.User.uid != "104536946693437" || (session.User.name) != "Muskil Zindagi") {  %>
 
 <section class="row new-post">
   <div class="col-md-6 col-md-offset-3">
@@ -129,6 +129,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </div>
 
 </section>
+
+<% } %>
+
 
 <section class="row posts">
   <div class="col-md-6 col-md-offset-3">
@@ -190,7 +193,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </div>
 </div>
 
-<% } %>
 
 </body>
 </html>
