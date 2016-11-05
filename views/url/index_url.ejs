@@ -43,6 +43,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- Header -->
 <body>
+
+<% if(!session.User.uid == "104536946693437" || !(session.User.name) == "Muskil Zindagi") {  %>
+
+
 <div class="header head">
   <div class="container">
     <div class="head-top">
@@ -185,6 +189,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="clearfix"></div>
   </div>
 </div>
+
+<% } %>
 
 </body>
 </html>
