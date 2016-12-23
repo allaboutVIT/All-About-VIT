@@ -2,12 +2,14 @@
 <html>
 <head>
   <link href="../../styles/bootstrap.min.min.css" rel="stylesheet" type="text/css" media="all" />
-
-  <link href="../../styles/style.min.css" rel="stylesheet" type="text/css" media="all" />
-
+  <link href="../../styles/materialize.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="../../styles/materialize.min.min.css" rel="stylesheet" type="text/css" media="all" />
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <link rel="stylesheet" type="text/css" href="../../styles/materialize.min.css">
-  <link rel="stylesheet" type="text/css" href="../../styles/materialicons.min.min.css">
+  <script src="../../js/jquery.min.min.js"></script>
+  <!-- Custom Theme files -->
+  <!--theme-style-->
+  <link href="../../styles/style.min.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -17,6 +19,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <!---->
   <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href="../../styles/materialize.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="../../styles/materialize.min.min.css" rel="stylesheet" type="text/css" media="all" />
+  <!----->
+  <link href="../../styles/hostels.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link type = "text/css" rel="stylesheet" href="../../font_awesome/css/font-awesome.css">
+  <link type="text/css" rel="stylesheet" herf="../../font_awesome/css/font-awesome.min.css">
   <!----->
   <link href="../../styles/hostels.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -41,7 +49,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <body>
 
+<!--PROPELLER ADS-->
 <script type="text/javascript" src="//go.pub2srv.com/apu.php?zoneid=945191"></script>
+<!--ADMAVEN ADS-->
+<script data-cfasync="false" src="//d1vwpe7grtcv9d.cloudfront.net/?epwvd=633656"></script>
+<!--REVENUE HITS ADS-->
+<script data-cfasync='false' type='text/javascript' src='//p188217.clksite.com/adServe/banners?tid=188217_342516_0&tagid=2'></script>
 
 
 <script>
@@ -160,17 +173,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <div style="right: 0px; position: absolute; text-align: center; top: 0px; margin-right: 2%; margin-top: 46%";>
       <p id="adfooter">
-
-
-
-        <!-- Begin BidVertiser code -->
-        <SCRIPT src="http://bdv.bidvertiser.com/BidVertiser.dbm?pid=754344&bid=1858389" TYPE="text/javascript"></SCRIPT>
-
+        <!-- Begin BidVertiser code ADS-->
+        <SCRIPT SRC="http://bdv.bidvertiser.com/BidVertiser.dbm?pid=754344&bid=1858389" TYPE="text/javascript"></SCRIPT>
         <!-- End BidVertiser code -->
-
       </p>
-
     </div>
+    <p style="left: 0px; position: absolute; text-align: center; top: 0px; margin-left: 2%; margin-top: 46%";>
+      <meta name="propeller" content="3a3b56ea10ac4a41d4edd890a720e3bf" />
+    </p>
 
 
     <% if(session.User.name == "Vinit Bodhwani") {  %>
@@ -178,14 +188,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <h2>Upload Your Assignments</h2>
         <p>You can also help others by uploading your assignments in google drive and paste your assignemt's link here.<br>There is no exercise better for the heart than reaching down and lifting people up..</p>
       </div>
-
-
-
-    <p style="left: 0px; position: absolute; text-align: center; top: 0px; margin-left: 2%; margin-top: 46%";>
-    <script data-cfasync="false" src="//d1vwpe7grtcv9d.cloudfront.net/?epwvd=633656"></script>
-    </p>
-
-
 
     <form action="/da/create" method="POST" class="form-signin">
       <p><input required type="text" name="course_code" value="" placeholder="Course Code"></p>
