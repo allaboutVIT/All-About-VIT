@@ -69,11 +69,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <% if (req.isAuthenticated()) { %>
 
             <ul class="nav navbar-nav cl-effect-8">
-              <li ><a class="" href="/user/show/<%= user.id %>">Home </a></li>
+              <li ><a class="" href="/user/show/<%= user.id %>">Home</a></li>
               <li><a href="/user/hostels_1/<%= user.id %>">Hostels</a></li>
               <li><a href="/user/mess_1/<%= user.id %>">Mess</a></li>
-              <li><a href="/da/index_da/">Digital assignment</a></li>
+              <li><a href="/da/index_da/<%= session.User.id %>">Assignments</a></li>
+              <li><a href="/book/index_book/<%= session.User.id %>">Books</a></li>
               <li><a href="/user/restaurents_1/<%= user.id %>">Restaurants</a></li>
+              <li><a href="/url/index_url/<%= user.id %>">Doubts</a></li>
             </ul>
             <% } %>
           </div><!-- /.navbar-collapse -->

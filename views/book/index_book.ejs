@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
   <link href="../../styles/bootstrap.min.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="../../styles/materialize.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="../../styles/materialize.min.min.css" rel="stylesheet" type="text/css" media="all" />
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="../../js/jquery.min.min.js"></script>
   <!-- Custom Theme files -->
   <!--theme-style-->
   <link href="../../styles/style.min.css" rel="stylesheet" type="text/css" media="all" />
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <link rel="stylesheet" type="text/css" href="../../styles/materialize.min.css">
-  <link rel="stylesheet" type="text/css" href="../../styles/materialicons.min.min.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -19,37 +19,47 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <!---->
   <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href="../../styles/materialize.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="../../styles/materialize.min.min.css" rel="stylesheet" type="text/css" media="all" />
   <!----->
   <link href="../../styles/hostels.min.css" rel="stylesheet" type="text/css" media="all" />
   <link type = "text/css" rel="stylesheet" href="../../font_awesome/css/font-awesome.css">
   <link type="text/css" rel="stylesheet" herf="../../font_awesome/css/font-awesome.min.css">
+  <!----->
+  <link href="../../styles/hostels.css" rel="stylesheet" type="text/css" media="all" />
+
+
+  <style>
+
+    @media (max-width:769px) {
+      #adfooter
+      {left:0;
+        position: absolute;
+        text-align:center;
+        width:100%;
+        z-index:999;
+        padding-top: 700%;
+      }
+    }
+
+  </style>
+
 
 </head>
-<style type="text/css">
-  .imgdiv img{
-    width: 100%;
-    border-radius: 50%;
-    margin-top: 2rem;
-  }
-  .passenger{
-    position: relative;
-
-  }
-  .imgdiv{
-
-  }
-</style>
 
 
-<!-- Header -->
+
 <body>
-
-
-
+<!-- Header -->
 <div class="header head">
   <div class="container">
     <div class="head-top">
+      <div class="logo">
+        <a href="index.html"><img src="images/bo.png" alt="" title="Academic"></a>
+      </div>
+      <div class="login">
 
+      </div>
       <div class="clearfix"></div>
     </div>
   </div>
@@ -93,98 +103,105 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
   </div>
 </div>
+<!-- Header -->
 
-
-<div class="about">
-
-<div class="container">
-  <div class="about-head">
-    <h2>Comments/Suggesstions</h2>
-    <p> Here you can ask your doubts or suggesst anything if you are facing any difficulty in this website.</p>
-  </div>
-  </div>
-</div>
-
-
-
-
-<% if(session.User.uid != "104536946693437" || (session.User.name) != "Muskil Zindagi") {  %>
-
-<section class="row new-post">
-  <div class="col-md-6 col-md-offset-3">
-    <header><h3>Want to say something?</h3></header>
-    <form action="/url/create" method="post">
-      <div class="form-group">
-        <textarea required class="form-control" name="body" id="new_post" rows="5" placeholder="Your doubt or answer"></textarea>
-        <p><input  type="hidden" name="image" value="http://graph.facebook.com/<%= session.User.uid %>/picture?type=square"  placeholder="Course Code"></p>
-        <p><input  type="hidden" name="name" value="<%= session.User.name %>"  placeholder=""></p>
-
-      </div>
-      <button type="submit" class="btn btn-primary">Create Post</button>
-      <input type="hidden"  value="" name="_token" />
-    </form>
-    </br></br>
-
-
-  </div>
-
-</section>
-
-<% } %>
-
-
-<section class="row posts">
-  <div class="col-md-6 col-md-offset-3">
-    <header><h5>What other people ask or say...</h5></header>
-    <div class="container1">
-
-      <% _.each(urls, function(url) { %>
-      <tr data-id="<%= url.id %>" data-model="url">
-
-        <div class="row">
-          <!-- box ka size adjust karne ke liye m8 and offset-m2 ko change kar de-->
-          <div class="box-wrapper">
-            <section class="passenger card-panel hoverable">
-              <div class="row">
-                <div class="timediv right"><i class="fa fa-calendar-o" aria-hidden="true"></i> <%= url.creationDate %>
-                </div>
-                <div class="imgdiv col s3 m2 center-align valign-wrapper">
-                  <img class="valign" src="<%= url.image %>">
-                </div>
-                <div class="detailsdiv col s9 m10">
-                  <h5 class="fontsize14rem"><b><%= url.name %></b></h5>
-                  <p><%= url.body %></p>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-
-      </tr>
-
-      <% }) %>
+<!-- DIGITAL ASSIGNMENTS -->
+<div class="gallery">
+  <div class="container">
+    <div class="gallery-top">
+      <h2>Theory and Lab  Assignemts</h2>
+      <p>Now, you can go to the link given below and complete your assignment very easily</p>
     </div>
+    <div class="filtr-container">
+      <table class="bordered striped highlight responsive-table">
+        <tr>
+          <th>Book's name</th>
+          <th>Submitted By</th>
+          <th>Subject</th>
+          <th>Expexted Cost</th>
+          <th>Contact No</th>
+          <th>Email</th>
+
+
+        </tr>
+
+        <% _.each(books, function(book) { %>
+        <tr data-id="<%= book.id %>" data-model="da">
+
+          <td><%= book.book_name %></td>
+          <td><%= book.name %></td>
+          <td><%= book.subject %></td>
+
+          <% if(!book.cost.toString()) { %>
+          <td>Free</td>
+          <% } %>
+          <% if(book.cost.toString()) { %>
+          <td><%= book.cost %> rs.</td>
+          <% } %>
+
+          <% if(book.contact.toString().length == 10 && book.contact.toString().charAt(0) == 9 || book.contact.toString().charAt(0) == 8 || book.contact.toString().charAt(0) == 7) { %>
+          <td><%= book.contact %></td>
+          <% } %>
+          <% if(!(book.contact.toString().length == 10 && book.contact.toString().charAt(0) == 9 || book.contact.toString().charAt(0) == 8 || book.contact.toString().charAt(0) == 7)) { %>
+          <td>Not provided or Invalid</td>
+          <% } %>
+
+          <td><%= book.email %></td>
+
+
+        </tr>
+        <% }) %>
+      </table>
+
+    </div>
+    </br>
+    </br>
+
+    <% if(flash.err && flash) { %>
+    <% Object.keys(flash.err).forEach(function(error){ %>
+    <li><%- JSON.stringify(flash.err[error]) %></li>
+    <% }) %>
+    <% } %>
+
+
+
+    <div class="gallery-top">
+      <h2>Upload Your Assignments</h2>
+      <p>You can also help others by uploading your assignments in google drive and paste your assignemt's link here.<br>There is no exercise better for the heart than reaching down and lifting people up..</p>
+    </div>
+
+    <form action="/book/create" method="POST" class="form-signin">
+      <p><input required type="text" name="book_name" value="" placeholder="Book's name"></p>
+      <p><input required type="hidden" name="name" value="<%= session.User.name %>" placeholder="Your name"></p>
+      <p><input required type="text" name="subject" value="" placeholder="Subject"></p>
+      <p><input  type="number"  name="cost" value="" placeholder="Expected Cost(0 as default)"></p>
+      <p><input  minlength="10" type="number" name="contact" value="" placeholder="Contact Number"></p>
+      <p><input type="email" name="email" value="" placeholder="Email (optional)"></p>
+
+      <p><input required type="submit" value="Upload" class="btn btn-lg- btn-primary btn-block"/></p>
+      <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+    </form>
+
+
+
   </div>
-
-</section>
-
 </div>
+
+
 <div class="footer">
   <div class="container">
     <div class="col-md-6 footer-left">
       <h3>Information</h3>
       <p class="para">This is website is completely made for helping purpose, so that  students can get their required information without any difficulty.
         </br>
-        You can also contribute - https://github.com/bodhwani/Know-My-VIT
-        </br>
-      </p>
+        You can also contribute - https://github.com/bodhwani/Know-My-VIT</p>
     </div>
     <div class="col-md-6 footer-right">
       <h3>Contact Us</h3>
       <ul class="con-icons">
         <li>
           <i  style="color: white" class="fa fa-info-circle" aria-hidden="true"></i>
-          allaboutvit123@gmail.com</li>
+          knowmyvit@gmail.com</li>
       </ul>
       <p class="copy-right">© 2016 Academic. Made by Vinit <i  style="color: white" class="fa fa-heart" aria-hidden="true"></i>
       </p>
@@ -195,4 +212,3 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 </body>
-</html>
