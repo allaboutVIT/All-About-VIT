@@ -1,0 +1,19 @@
+<% if(session.User.name == "Vinit Bodhwani") {  %>
+
+<form action="/book/update_book/<%= book.id %>" method="POST" class="form-signin">
+  <h2>Edit this form</h2>
+
+  <p><input required type="text" name="book_name" value="<%= book.name %>" placeholder="Book's name"></p>
+  <p><input required type="hidden" name="name" value="<%= session.User.name %>" placeholder="Your name"></p>
+  <p><input required type="text" name="subject" value="<%= book.subject %>" placeholder="Subject"></p>
+  <p><input  type="number"  name="cost" value="<%= book.cost %>" placeholder="Expected Cost(0 as default)"></p>
+  <p><input  minlength="10" type="number" name="contact" value="<%= book.number %>" placeholder="Contact Number"></p>
+  <p><input type="email" name="email" value="<%= book.email %>" placeholder="Email (optional)"></p>
+
+  <p><input required type="submit" value="Upload" class="btn btn-lg- btn-primary btn-block"/></p>
+  <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+
+</form>
+
+<% } %>
+

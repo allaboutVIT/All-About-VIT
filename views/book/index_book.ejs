@@ -84,6 +84,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <li><a href="/user/mess_1/<%= session.User.id %>">Mess</a></li>
               <li><a href="/da/index_da/<%= session.User.id %>">Assignments</a></li>
               <li><a href="/book/index_book/<%= session.User.id %>">Books</a></li>
+
               <li><a href="/user/restaurents_1/<%= session.User.id %>">Restaurents</a></li>
               <li><a href="/url/index_url/<%= session.User.id %>">Doubts</a></li>
 
@@ -119,12 +120,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <th>Expexted Cost</th>
           <th>Contact No</th>
           <th>Email</th>
-
-
         </tr>
 
         <% _.each(books, function(book) { %>
-        <tr data-id="<%= book.id %>" data-model="da">
+        <tr data-id="<%= book.id %>" data-model="book">
 
           <td><%= book.book_name %></td>
           <td><%= book.name %></td>
@@ -146,6 +145,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
           <td><%= book.email %></td>
 
+          <% if(session.User.name == "Vinit Bodhwani") {  %>
+          <td><a href="/book/edit_book/<%= book.id %>" class="btn btn-sm btn-warning">Edit</a></td>
+          <td><form action="/book/destroy_book/<%= book.id %>" method="POST">
+              <input type="hidden" name="_method" value="delete"/>
+              <input type="submit" class="btn btn-sm btn-danger" value="Delete"/>
+              <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+            </form></td>
+          <% } %>
+
 
         </tr>
         <% }) %>
@@ -161,8 +169,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <% }) %>
     <% } %>
 
-
-
     <div class="gallery-top">
       <h2>Upload Your Books</h2>
       <p>You can upload your book's and other required valid details.<br>There is no exercise better for the heart than reaching down and lifting people up..</p>
@@ -175,7 +181,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <p><input  type="number"  name="cost" value="" placeholder="Expected Cost(0 as default)"></p>
       <p><input  minlength="10" type="number" name="contact" value="" placeholder="Contact Number"></p>
       <p><input type="email" name="email" value="" placeholder="Email (optional)"></p>
-
       <p><input required type="submit" value="Upload" class="btn btn-lg- btn-primary btn-block"/></p>
       <input type="hidden" name="_csrf" value="<%= _csrf %>" />
     </form>

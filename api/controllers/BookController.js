@@ -1,9 +1,6 @@
-/**
- * BookController
- *
- * @description :: Server-side logic for managing books
- * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
- */
+
+
+
 
 module.exports = {
 
@@ -33,6 +30,47 @@ module.exports = {
       });
     });
   },
+
+  edit_book : function(req, res, next){
+    Book.findOne(req.param('id'), function foundBook (err, book){
+      //find the user by id
+      if(err) return next(err);
+      if(!book) return next();
+
+      res.view({
+        book : book
+      });
+    });
+  },
+
+  update_book : function(req,res,next){
+
+    Book.update(req.param('id'),req.params.all(), function BookUpdated(err){
+      if(err){
+        return res.redirect('/book/upload/'+req.param('id'));
+      }
+
+      res.redirect('/book/index_book/'+req.param('id'));
+    });
+  },
+
+  destroy_book: function(req, res, next) {
+    Book.findOne(req.param('id'), function foundBook(err, book) {
+
+      if (err) return next(err);
+
+      if(!book) return next('Digital Assignment doesn\'t exist ');
+
+      Book.destroy(req.param('id'), function BookDestroyed(err){
+        if(err) return next(err);
+      });
+
+      res.redirect('/book/index_book');
+
+
+    });
+
+  }
 
 };
 
