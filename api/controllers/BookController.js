@@ -47,6 +47,7 @@ module.exports = {
 
     Book.update(req.param('id'),req.params.all(), function BookUpdated(err){
       if(err){
+        console.log(err);
         return res.redirect('/book/upload/'+req.param('id'));
       }
 
