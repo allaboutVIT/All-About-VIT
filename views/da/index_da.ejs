@@ -139,7 +139,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <th>Subject</th>
             <th>Faculty</th>
             <th>Link</th>
-            <% if (session.authenticated && session.User.admin) { %>
+            <% if(session.User.name == "Vinit Bodhwani") {  %>
             <th>Show</th>
             <th>Edit</th>
             <th>Delete</th>
@@ -155,8 +155,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <td><%= da.faculty %></td>
             <td><a href="<%= da.link %>" target="_blank"><%= da.link %></a> </td>
 
-            <% if (session.authenticated && session.User.admin) { %>
-            <td><a href="/da/show_da/<%= da.id %>" class="btn btn-sm btn-primary">Show</a></td>
+            <% if(session.User.name == "Vinit Bodhwani") {  %>
             <td><a href="/da/edit_da/<%= da.id %>" class="btn btn-sm btn-warning">Edit</a></td>
             <td><form action="/da/destroy_da/<%= da.id %>" method="POST">
                 <input type="hidden" name="_method" value="delete"/>
@@ -180,7 +179,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </p>
 
 
-    <% if(session.User.name == "Vinit Bodhwani") {  %>
     <div class="gallery-top">
         <h2>Upload Your Assignments</h2>
         <p>You can also help others by uploading your assignments in google drive and paste your assignemt's link here.<br>There is no exercise better for the heart than reaching down and lifting people up..</p>
@@ -197,7 +195,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <p><input type="submit" value="Upload" class="btn btn-lg- btn-primary btn-block"/></p>
       <input type="hidden" name="_csrf" value="<%= _csrf %>" />
     </form>
-    <% } %>
 
 
   </div>
