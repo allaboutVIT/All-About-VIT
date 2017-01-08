@@ -50,12 +50,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <body>
-
-<!--PROPELLER ADS-->
-<script type="text/javascript" src="//go.pub2srv.com/apu.php?zoneid=945191"></script>
-<!--ADMAVEN ADS-->
-<script data-cfasync="false" src="//d1vwpe7grtcv9d.cloudfront.net/?epwvd=633656"></script>
-
 <!-- Header -->
 <div class="header head">
   <div class="container">
@@ -126,6 +120,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <th>Expexted Cost</th>
           <th>Contact No</th>
           <th>Email</th>
+
+
+
+
         </tr>
 
         <% _.each(books, function(book) { %>
@@ -159,8 +157,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <input type="hidden" name="_csrf" value="<%= _csrf %>" />
             </form></td>
           <% } %>
-
-
         </tr>
         <% }) %>
       </table>
@@ -186,7 +182,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <p><input required type="text" name="subject" value="" placeholder="Subject"></p>
       <p><input  type="number"  name="cost" value="" placeholder="Expected Cost(0 as default)"></p>
       <p><input  minlength="10" type="number" name="contact" value="" placeholder="Contact Number"></p>
-      <p><input required type="email" name="email" value="" placeholder="Email"></p>
+      <p><input type="email" name="email" value="" placeholder="Email (optional)"></p>
       <p><input required type="submit" value="Upload" class="btn btn-lg- btn-primary btn-block"/></p>
       <input type="hidden" name="_csrf" value="<%= _csrf %>" />
     </form>
