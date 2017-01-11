@@ -1,7 +1,3 @@
-
-
-
-
 module.exports = {
 
   create  : function(req, res, next) {
@@ -55,24 +51,6 @@ module.exports = {
 
       res.redirect('/book/index_book/'+req.param('id'));
     });
-  },
-
-  destroy_book: function(req, res, next) {
-    Book.findOne(req.param('id'), function foundBook(err, book) {
-
-      if (err) return next(err);
-
-      if(!book) return next('Digital Assignment doesn\'t exist ');
-
-      Book.destroy(req.param('id'), function BookDestroyed(err){
-        if(err) return next(err);
-      });
-
-      res.redirect('/book/index_book');
-
-
-    });
-
   }
 
 };

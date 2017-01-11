@@ -65,24 +65,6 @@ module.exports = {
 
       res.redirect('/da/show_da/'+req.param('id'));
     });
-  },
-
-  destroy_da: function(req, res, next) {
-    Da.findOne(req.param('id'), function foundDa(err, da) {
-
-      if (err) return next(err);
-
-      if(!da) return next('Digital Assignment doesn\'t exist ');
-
-      Da.destroy(req.param('id'), function daDestroyed(err){
-        if(err) return next(err);
-      });
-
-      res.redirect('/da/index_da');
-
-
-    });
-
   }
 };
 

@@ -69,22 +69,6 @@ module.exports = {
     });
   },
 
-  destroy_url: function(req, res, next) {
-    Url.findOne(req.param('id'), function foundUrl(err, url) {
 
-      if (err) return next(err);
-
-      if(!url) return next('Url doesn\'t exist ');
-
-      Url.destroy(req.param('id'), function urlDestroyed(err){
-        if(err) return next(err);
-      });
-
-      res.redirect('/url/index_url');
-
-
-    });
-
-  }
 };
 
