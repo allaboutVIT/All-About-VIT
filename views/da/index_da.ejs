@@ -155,7 +155,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <td><%= da.faculty %></td>
             <td><a href="<%= da.link %>" target="_blank"><%= da.link %></a> </td>
 
-            <% if(session.User.name == "Vinit Bodhwani") {  %>
+            <% if(session.User.name == "Vinit Bodhwani" && session.User.uid == "371396243192109" ) {  %>
             <td><a href="/da/edit_da/<%= da.id %>" class="btn btn-sm btn-warning">Edit</a></td>
             <td><form action="/da/destroy_da/<%= da.id %>" method="POST">
                 <input type="hidden" name="_method" value="delete"/>
