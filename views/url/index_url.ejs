@@ -42,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <!-- Header -->
-<body>
+<body oncontextmenu="return false">
 
 <!--PROPELLER ADS-->
 <script type="text/javascript" src="//go.pub2srv.com/apu.php?zoneid=945191"></script>
@@ -121,7 +121,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <form action="/url/create" method="post">
       <div class="form-group">
         <textarea required class="form-control" name="body" id="new_post" rows="5" placeholder="Your doubt or answer"></textarea>
-        <p><input  type="hidden" name="image" value="http://graph.facebook.com/<%= session.User.uid %>/picture?type=square"  placeholder="Course Code"></p>
+        <p><input  type="hidden" name="image" value="http://graph.facebook.com/<%= session.User.uid %>/picture?type=large"  placeholder="Course Code"></p>
         <p><input  type="hidden" name="name" value="<%= session.User.name %>"  placeholder=""></p>
 
       </div>
