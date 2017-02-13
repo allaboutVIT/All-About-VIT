@@ -61,7 +61,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <% if (req.isAuthenticated()) { %>
 
             <ul class="nav navbar-nav cl-effect-8">
               <li ><a class="" href="/user/show/<%= user.id %>">Home</a></li>
@@ -72,7 +71,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <li><a href="/user/restaurents_1/<%= user.id %>">Restaurants</a></li>
               <li><a href="/url/index_url/<%= user.id %>">Doubts</a></li>
             </ul>
-            <% } %>
           </div><!-- /.navbar-collapse -->
         </div>
         <!-- start search-->
@@ -85,6 +83,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </div>
 </div>
 <!--gallery-->
+
 
 <div class="about">
   <div class="container">
