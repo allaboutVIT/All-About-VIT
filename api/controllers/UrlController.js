@@ -5,17 +5,8 @@ module.exports = {
     res.view();
   },
 
-  'crc' : function (req, res) {
-    res.view();
-
-  },
-
-  'hammingcode' : function (req,res) {
-    res.view();
-  },
-
-  'gobackn'  : function (req, res) {
-    res.view();
+  'network' : function (req, res) {
+    res.view()
   },
 
   create  : function(req, res, next) {

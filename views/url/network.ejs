@@ -1,3 +1,199 @@
+CRC :--
+
+#include <stdio.h>
+  #include <stdlib.h>
+    int main()
+    {
+    int i, j,k = 0;
+    int flag = 1, a[16], g[16], r[20],div[16], n, m;
+    printf("Enter the degree : ");
+    scanf("%d", &n);
+    printf("\nEnter the generator : \n");
+    for(i= 0; i<=n; i++)
+    scanf("%d", &g[i]);
+    printf("\nEnter the degree of frame : ");
+    scanf("%d", &m);
+    printf("Enter the frame : \n");
+    for(i = 0; i<=m; i++)
+    scanf("%d", &a[i]);
+
+    <!--if(m<n || (g[0] && g[n]) == 0)-->
+           <!--{-->
+           <!--printf("Not a proper generator \n");-->
+    <!--exit(0);-->
+    <!--}-->
+    for(i = m+1; i<=m+n; i++)
+    a[i] = 0;
+    for(j= 0; j<=n; j++)
+    r[j] = a[j];
+    for(i= n; i<=m+n;i++)
+    {
+    if(i>n)
+    {
+    for(j = 0; j<n; j++)
+    r[j] = r[j+1];
+    r[j] = a[i];
+    }
+    if(r[0])
+    div[k++] = 1;
+    else
+    {
+    div[k++] = 0;
+    continue;
+    }
+    for(j= 0; j<=n; j++)
+    r[j] = r[j] ^ g[j] ;
+
+    }
+    printf("\nQuotient is : ");
+    for(j= 0; j<k; j++)
+    printf("%d ", div[j]);
+    printf("\nReminder is : ");
+    for(i= 1; i<=n; i++)
+    printf("%d ", r[i]);
+    printf("\nTransmitted frame  is : ");
+    for(i = m+1,j= 1; i<=m+n;i++, j++)
+    a[i] = r[j];
+    for(i= 0; i<=m+n; i++)
+    printf("%d ", a[i]);
+    printf("\n");
+
+    printf("\nEnter the degree of frame : ");
+    scanf("%d", &m);
+    printf("Enter the frame : \n");
+    for(i = 0; i<=m; i++)
+    scanf("%d", &a[i]);
+    for(j = 0; j<=n; j++)
+    r[j] = a[j];
+    k = 0;
+
+    for(i= n; i<=m;i++)
+    {
+    if(i>n)
+    {
+    for(j = 0; j<n; j++)
+    r[j] = r[j+1];
+    r[j] = a[i];
+    }
+    if(r[0])
+    div[k++] = 1;
+    else
+    {
+    div[k++] = 0;
+    continue;
+    }
+    for(j= 0; j<=n; j++)
+    r[j] = r[j] ^ g[j] ;
+    }
+    printf("\nQuotient is : ");
+    for(j= 0; j<k; j++)
+    printf("%d ", div[j]);
+    printf("\nReminder is : ");
+    for(i= 1; i<=n; i++)
+    printf("%d ", r[i]);
+    for(i= 1; i<=n; i++)
+    {
+    if(r[i])
+    flag = 0;
+    }
+
+    if(flag)
+    printf("\n There is No Error in data\n");
+    else
+    printf(“\nThere is Error in data");
+    return 0;
+    }
+    <br><br>
+
+    Output :
+    degree = 3
+    generator = 1101
+    degree of frame = 4
+    frame = 00111
+    <br>
+    Again:
+    degree frame = 4
+    frame = 11011
+
+    <br><br>
+
+
+
+
+
+
+
+    Hamming Code :--
+
+#include<stdio.h>
+  #include<stdlib.h>
+
+    char data[5];
+    int encoded[8],edata[7],syndrome[3];
+    int hmatrix[3][7] = {
+    1,0,0,0,1,1,1,
+    0,1,0,1,0,1,1,
+    0,0,1,1,1,0,1
+    };
+    char gmatrix[4][8]={"0111000","1010100","1100010","1110001"};
+
+    int main(){
+    int i,j;
+    system("clear");
+    printf("Enter 4 bit data : ");
+    scanf("%s",data);
+    printf("\nGenerator matrix\n");
+    for(i=0;i<4;i++)
+    printf("%s\n",gmatrix[i]);
+    printf("\nEncoded data ");
+    for(i=0;i<7;i++)
+    {
+    for(j=0;j<4;j++)
+    encoded[i]+=((data[j]-'0')*(gmatrix[j][i]-'0'));
+    encoded[i]=encoded[i]%2;
+    printf("%d ",encoded[i]);
+    }
+    printf("\nHamming code----- Decoding\n");
+    printf("Enter encoded bits as recieved : ");
+    for(i=0;i<7;i++)
+    scanf("%d",&edata[i]);
+    for(i=0;i<3;i++)
+    {
+    for(j=0;j<7;j++)
+    syndrome[i]+=(edata[j]*hmatrix[i][j]);
+    syndrome[i]=syndrome[i]%2;
+    }
+    for(j=0;j<7;j++)
+    if((syndrome[0]==hmatrix[0][j]) && (syndrome[1]==hmatrix[1][j])&& (syndrome[2]==hmatrix[2][j]))
+    break;
+    if(j==7)
+    printf("\nError free\n");
+    else
+    {
+    printf("\nError recieved at bit number %d of data\n",j+1);
+    edata[j]=!edata[j];
+    printf("\nCorrect data should be : ");
+    for(i=0;i<7;i++)
+    printf("%d",edata[i]);
+    }
+    return 0;
+    }
+
+        <br>
+        output :
+        bit data : 1101
+        encoded data : 0011101
+        bits as recieved :
+        0010101
+
+        <br><br>
+
+
+
+
+
+
+
 Selective Repeat :--
 
 #include <stdio.h>
@@ -169,9 +365,20 @@ Selective Repeat :--
         receivePackets();
         }}
 
+                <br>
+
+                Output :
+                no of packets : 6
+                window size : 10
+                nyn.., se urself
+
+
+
         <br><br><br><br>
 
-GO BACK :--
+
+
+        GO BACK :--
 
         #include <stdio.h>
 
@@ -326,3 +533,13 @@ GO BACK :--
 
                 printf("\nSUCCESS! Acknowledgements received: %d\n", numAck);
                 }
+
+                        <br><br>
+                        Output :
+                        no of packets : 5
+                        window size:3
+                        nynnn
+
+
+
+
