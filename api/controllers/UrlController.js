@@ -5,6 +5,19 @@ module.exports = {
     res.view();
   },
 
+  'crc' : function (req, res) {
+    res.view();
+
+  },
+
+  'hammingcode' : function (req,res) {
+    res.view();
+  },
+
+  'gobackn'  : function (req, res) {
+    res.view();
+  },
+
   create  : function(req, res, next) {
 
     Url.create(req.params.all(), function urlCreated(err, url) {
@@ -68,6 +81,8 @@ module.exports = {
       res.redirect('/url/show_url/'+req.param('id'));
     });
   },
+
+
 
 
 };
