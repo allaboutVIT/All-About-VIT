@@ -34,8 +34,8 @@ module.exports.connections = {
 
   mongodb: {
     adapter: 'sails-mongo',
-    url: "mongodb://temp:tempuser@ds127978.mlab.com:27978/heroku_9n4jc0lx"
-      // "mongodb://aav:vinit123aav@ds137267.mlab.com:37267/allaboutvit"
+    url: ""
+      
   }
   //mongodb://<dbuser>:<dbpassword>@ds137267.mlab.com:37267/allaboutvit
   /***************************************************************************
